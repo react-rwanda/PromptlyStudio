@@ -1,106 +1,93 @@
-# 🚀 Express API (Codegen, Figma Import, Export)
+# StackGenie API
 
-Cette API backend est développée avec **Express.js**.
-Elle fournit trois fonctionnalités principales :
+**TypeScript Express.js backend for StackGenie** - Africa's first open-source AI-powered framework that generates fullstack apps from prompts.
 
-* **Codegen** → Génération de code à partir d’un prompt texte.
-* **Figma Import** → Import de données depuis Figma.
-* **Export** → Export de projets ou de fichiers générés.
-
----
-
-## 📂 Structure du projet
-
-```
-api-express/
-├─ src/
-│  ├─ routes/
-│  │  ├─ codegen.js           # Routes pour la génération de code
-│  │  ├─ figma.js             # Routes pour l'import depuis Figma
-│  │  └─ export.js            # Routes pour l'export des données
-│  ├─ controllers/
-│  │  ├─ codegenController.js # Logique métier de la génération de code
-│  │  ├─ figmaController.js   # Logique métier de l'import Figma
-│  │  └─ exportController.js  # Logique métier de l’export
-│  ├─ app.js                  # Configuration de l'application Express
-│  └─ server.js               # Point d’entrée du serveur
-├─ .env                       # Variables d'environnement
-├─ package.json               # Dépendances & scripts NPM
-└─ README.md                  # Documentation du projet
-```
-
----
-
-## ⚙️ Installation
-
-1. **Cloner le projet**
+## 🚀 Quick Start
 
 ```bash
-git clone <repo_url>
-cd api-express
-```
-
-2. **Installer les dépendances**
-
-```bash
+# Install dependencies
 npm install
-```
 
----
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your configuration
 
-## 🚦 Lancer l’API
-
-### Mode développement (auto-restart avec nodemon)
-
-```bash
+# Start development server (TypeScript)
 npm run dev
 ```
 
-### Mode production
-
-```bash
-npm start
-```
-
-Le serveur sera disponible par défaut sur :
-👉 `http://localhost:5000`
-
----
-
-## 🔑 Configuration
-
-Créer un fichier `.env` à la racine du projet pour stocker les variables d’environnement :
+## 📁 Project Structure
 
 ```
+src/
+├── controllers/     # Route handlers
+├── routes/         # Express route definitions
+├── middlewares/    # Custom middleware
+├── models/         # Database models
+├── utils/          # Helper functions
+├── config/         # Configuration files
+├── app.js          # Express app setup
+└── server.js       # Server entry point
+```
+
+## 🛠 Available Scripts
+
+- `npm run dev` - Start development server with ts-node and nodemon
+- `npm run build` - Compile TypeScript to JavaScript
+- `npm start` - Start production server (requires build first)
+- `npm run type-check` - Run TypeScript type checking
+- `npm test` - Run tests (not configured yet)
+- `npm run lint` - Run ESLint (not configured yet)
+
+## 🔗 API Endpoints
+
+### Health Check
+- `GET /api/health` - Get API health status
+
+### Code Generation
+- `POST /api/codegen` - Generate code from prompt
+
+### Figma Integration (Coming Soon)
+- `POST /api/figma/import` - Import Figma designs
+
+### Export (Coming Soon)
+- `POST /api/export` - Export generated projects
+
+## 🌍 Environment Variables
+
+```env
 PORT=5000
-FIGMA_API_KEY=your_figma_api_key_here
+NODE_ENV=development
+DATABASE_URL=
+OPENAI_API_KEY=
+ANTHROPIC_API_KEY=
+FIGMA_CLIENT_ID=
+FIGMA_CLIENT_SECRET=
+JWT_SECRET=
 ```
 
----
+## 🔧 Middleware Stack
 
-## 📌 Endpoints disponibles
+- **Helmet** - Security headers
+- **CORS** - Cross-origin resource sharing
+- **Morgan** - HTTP request logging
+- **Express.json** - JSON body parsing
+- **Custom Error Handler** - Centralized error handling
 
-| Méthode | Endpoint            | Description                          |
-| ------- | ------------------- | ------------------------------------ |
-| POST    | `/api/codegen`      | Générer du code à partir d’un prompt |
-| POST    | `/api/figma/import` | Importer des données depuis Figma    |
-| GET     | `/api/export`       | Exporter un projet ou un fichier     |
+## 📝 Development Notes
 
----
+- **TypeScript** with strict type checking
+- **ES2020** target with CommonJS modules
+- Environment-based configuration with dotenv
+- Structured error handling with custom types
+- Request logging in development (Morgan)
+- Graceful shutdown handling
+- Type-safe API responses and requests
 
-## 🛠 Scripts utiles
+## 🤝 Contributing
 
-Dans le fichier `package.json`, les scripts suivants sont disponibles :
-
-```json
-"scripts": {
-  "start": "node src/server.js",
-  "dev": "nodemon src/server.js"
-}
-```
-
----
-
-✨ Tu es prêt à développer et étendre ton API !
+See the main project [CONTRIBUTING.md](../../CONTRIBUTING.md) for guidelines.
 
 ---
+
+**Built with ❤️ by Rwanda Dev Community**
