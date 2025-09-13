@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 Project Vision
+##  Project Vision
 
 * Transform a **text prompt** → complete React application (components, styles, logic).
 * Transform a **Figma / Adobe XD design** → production-ready React app.
@@ -15,7 +15,7 @@
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 1. Generate front-end applications without complex setup.
 2. Provide an **integrated code editor** for editing, previewing, and exporting.
@@ -25,7 +25,7 @@
 
 ---
 
-## 🏗 Minimum Viable Product (MVP)
+##  Minimum Viable Product (MVP)
 
 * Integrated code editor (Monaco Editor).
 * Prompt-to-code generation → React + Tailwind.
@@ -35,7 +35,7 @@
 
 ---
 
-## 🛠 Backend & AI
+##  Backend & AI
 
 * **Backend:** Node.js + Express
 * **Database:** Supabase or Firebase
@@ -45,7 +45,7 @@
 
 ---
 
-## 📅 Project Timeline
+##  Project Timeline
 
 | Phase   | Duration | Description                                                              |
 | ------- | -------- | ------------------------------------------------------------------------ |
@@ -58,7 +58,7 @@
 
 ---
 
-## 💻 Frontend Technologies
+##  Frontend Technologies
 
 * React.js
 * TailwindCSS
@@ -67,7 +67,7 @@
 
 ---
 
-## 📦 Quickstart / Installation
+## Quickstart / Installation
 
 ```bash
 git clone https://github.com/yourusername/promptly-studio.git
@@ -82,7 +82,7 @@ Create `.env` from `.env.example` and fill your API keys.
 
 ---
 
-## 🏗 Monorepo Structure (pnpm workspaces)
+## Monorepo Structure (pnpm workspaces)
 
 ```
 ---
@@ -117,7 +117,7 @@ promptly-studio/
 
 ---
 
-## 🔧 Architecture Overview
+##  Architecture Overview
 
 * **apps/web** → React + Vite (UI, editor, preview)
 * **apps/api** → Express API (codegen, design import)
@@ -129,7 +129,7 @@ promptly-studio/
 
 ---
 
-## ⚡ Scripts
+##  Scripts
 
 * `pnpm dev` → start web UI
 * `pnpm dev:api` → start API backend
@@ -140,25 +140,29 @@ promptly-studio/
 
 ---
 
-## 🤝 Contribution Guidelines
+##  Contribution Guidelines and Support
 
 See [`CONTRIBUTING.md`](CONTRIBUTING.md) for instructions on forking, coding, testing, and PRs.
 
+Having trouble? Get help in the official React JS Discord.
+
+
+
 ---
 
-## 📜 Code of Conduct
+##  Code of Conduct
 
 See [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md). Please be respectful and collaborative.
 
 ---
 
-## 📝 License
+##  License
 
 This project is licensed under the **MIT License** – see [`LICENSE`](LICENSE) for details.
 
 ---
 
-## 🗺 Roadmap
+##  Roadmap
 
 1. **Phase 1 – Design & Architecture**: data model, UX flows, component library tokens
 2. **Phase 2 – Technical Foundation**: Monaco integration, export to ZIP, API scaffolding
@@ -169,7 +173,7 @@ This project is licensed under the **MIT License** – see [`LICENSE`](LICENSE) 
 
 ---
 
-## ⚡ Zero‑Config Developer Experience
+##  Zero‑Config Developer Experience
 
 * Prewired paths `@promptly/*` from web → packages
 * Single `pnpm i` installs everything
@@ -178,7 +182,7 @@ This project is licensed under the **MIT License** – see [`LICENSE`](LICENSE) 
 
 ---
 
-## 📝 Next Steps
+##  Next Steps
 
 1. Initialize a GitHub repository and paste these files.
 2. Run `corepack enable && pnpm i`.
